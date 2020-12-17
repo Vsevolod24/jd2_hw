@@ -1,0 +1,11 @@
+set JAVA_HOME 
+set JAVA_HOME=d:\Java\jdk-11
+set Apache maven
+set PATH=%PATH%;d:\opt\apache-maven-3.6.3\bin
+cd /D d:\work\hello-maven
+mvn archetype:generate
+8
+groupId: it.academy
+artifactId: maven-quickstart
+mvn clean compile
+mvn test

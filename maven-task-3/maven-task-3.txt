@@ -1,0 +1,5 @@
+mvn archetype:generate -DarchetypeArtifactId=maven-archetype-webapp -DartifactId=testWebApp -DgroupId=com.epam.maven -Dversion=1.0-SNAPSHOT -Dpackage=com.epam.maven
+cd testWebApp
+mvn compile  
+mvn test 
+mvn install   
