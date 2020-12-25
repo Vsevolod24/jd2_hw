@@ -1,0 +1,32 @@
+Создал файл для его реформации под разные ситуации example.txt в папке jd2_hw, которая уже отслеживается репозиторием
+echo "The first changes" > examlpe.txt
+git commit -m "The first changes"
+git push origin
+
+git branch dirfirst
+git checkout dirfirst
+vim example.txt
+git status - пишет неотслеживаемый файл. идет запрос на git add .
+git add example.txt
+git commit example.txt - переход внутрь файла и возможно редактирование
+git push origin dirfirst
+git checkout master
+git merge dirfirst
+git push origin master
+
+git branch dirsecond
+git checkout dirsecond
+vim dirsecond
+git add example.txt
+git commit - Закоммитили второй раз
+git push origin dirsecond
+git checkout master
+git merge dirsecond
+git push origin master
+
+vim example.txt
+git add example.txt
+git commit
+git push origin master
+git reset —hard
+git push origin
