@@ -1,0 +1,32 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0" metadata-complete="true">
+
+    <servlet>
+        <servlet-name>TestServlet</servlet-name>
+        <servlet-class>it.academy.servlet.MyServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>TestServlet</servlet-name>
+        <url-pattern>/task14</url-pattern>
+    </servlet-mapping>
+
+    <context-param>
+        <param-name>database.url</param-name>
+        <param-value>jdbc:mysql://localhost:3306/prod?serverTimezone=UTC</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>database.user</param-name>
+        <param-value>root</param-value>
+    </context-param>
+
+    <context-param>
+        <param-name>database.password</param-name>
+        <param-value>root</param-value>
+    </context-param>
+
+</web-app>
